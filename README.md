@@ -6,19 +6,19 @@ This project is aimed at providing the required infrastructure code along with t
 
 
 ## Building
-Create infrastructure using the code below
+You can create infrastructure using the code below
 
-### Create network infrastructure
+##### Create network infrastructure
 
-`./create.sh udagramInfra network.yml network-parameters.json`
+`./create.sh udagramNetworkInfra network.yml network-parameters.json`
 
-### Create servers
+##### Create servers infrastructure
 
-`./create.sh udagramServer servers.yml server-parameters.json`
+`./create.sh udagramServerInfra servers.yml server-parameters.json`
 
-## Updating Infrastructure
-To update infrastructure you can use scripts `update.sh`
-by running `./update.sh udagramServer servers.yml server-parameters.json` for servers, or `./update.sh udagramInfra network.yml network-parameters.json` for network infrastructure.
+##### Updating Infrastructure
+To update infrastructure you can use scripts `update.sh` Below is the script to update a server infrastructure
+`./update.sh udagramServerInfra servers.yml server-parameters.json` 
 
-## Deleting Infrastructure
-To delete infrastructure you can use scripts `delete-network.sh` and `delete-server.sh`.
+## URL to verify the app is running properly,
+http://udagr-webap-1wa2zoj2qz86g-453793089.us-east-1.elb.amazonaws.com/

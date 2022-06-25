@@ -121,14 +121,13 @@ Resources:
       VpcId: 
         Fn::ImportValue:
           Fn::Sub: "${EnvironmentName}-VPCID"
+
+# Output to help in getting url of the loadbalancer in the stack's outputs          
 Outputs:
+  LoadBalancer:
+    Description: A reference to the Application Load Balancer
+    Value: !Ref WebAppLB
 
-# output for the load balancer details
-    LoadBalancer:
-      Description: A reference to the Application Load Balancer
-      Value: !Ref WebAppLB
-
-  # output for load balancer URL
-    LoadBalancerUrl:
-      Description: The URL of the ALB
-      Value: !Join [ "", [ "http://", !GetAtt WebAppLB.DNSName ] ]
+  LoadBalancerUrl:
+    Description: The URL of the ALB
+    Value: !Join [ "", [ "http://", !GetAtt WebAppLB.DNSName ] ]
