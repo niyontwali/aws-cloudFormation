@@ -56,7 +56,6 @@ Resources:
           sudo rm index.html
           sudo wget -P . https://mybucket-348694345495.s3.amazonaws.com/index.html
       ImageId: ami-00ddb0e5626798373
-      KeyName: project2
       SecurityGroups:
       - Ref: WebServerSecGroup
       InstanceType: t2.medium
